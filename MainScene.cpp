@@ -1,7 +1,5 @@
 #include "MainScene.h"
 
-USING_NS_CC;
-
 Scene* MainScene::createScene()
 {
     // 'scene' is an autorelease object
@@ -56,6 +54,8 @@ bool MainScene::init()
     
     auto label = LabelTTF::create("Hello World", "Arial", 24);
     
+	log("test output \t tab");
+
     // position the label on the center of the screen
     label->setPosition(Vec2(origin.x + visibleSize.width/2,
                             origin.y + visibleSize.height - label->getContentSize().height));

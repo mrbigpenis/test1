@@ -3,6 +3,8 @@
 
 #include "cocos2d.h"
 
+USING_NS_CC;
+
 class MainScene : public cocos2d::Layer
 {
 public:
