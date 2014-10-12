@@ -2,6 +2,7 @@
 #define __MAINSCENE_SCENE_H__
 
 #include "cocos2d.h"
+#include <iostream>
 
 USING_NS_CC;
 
@@ -16,7 +17,10 @@ public:
     
     // a selector callback
     void menuCloseCallback(cocos2d::Ref* pSender);
-    
+	void buttonnn(cocos2d::Ref* pSender);
+	//void asd(cocos2d::Ref* pSender);
+	void buttonnn2(cocos2d::Ref* pSender);
+
     // implement the "static create()" method manually
 	CREATE_FUNC(MainScene);
 };

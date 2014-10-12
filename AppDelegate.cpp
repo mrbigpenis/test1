@@ -4,12 +4,12 @@
 USING_NS_CC;
 
 AppDelegate::AppDelegate() {
-
+	
 }
 
 AppDelegate::~AppDelegate() 
 {
-}
+}//java4evah
 
 //if you want a different context,just modify the value of glContextAttrs
 //it will takes effect on all platforms
@@ -31,13 +31,13 @@ bool AppDelegate::applicationDidFinishLaunching() {
         director->setOpenGLView(glview);
     }
 
-    // turn on display FPS
+    // turn on display FPS ye k
     director->setDisplayStats(true);
 
     // set FPS. the default value is 1.0/60 if you don't call this
     director->setAnimationInterval(1.0 / 60);
 
-    // create a scene. it's an autorelease object
+    // create a scene. it's an autorelease object a frame? no freeze so wat k
 	auto scene = MainScene::createScene();
 
     // run
