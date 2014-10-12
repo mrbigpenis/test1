@@ -1,5 +1,8 @@
 #include "MainScene.h"
 
+NetworkClient* MainScene::testClient = new NetworkClient();
+
+
 Scene* MainScene::createScene()
 {
     // 'scene' is an autorelease object
@@ -24,6 +27,15 @@ bool MainScene::init()
     {
         return false;
     }
+
+	const unsigned packet_size = sizeof(Packet);
+	char packet_data[packet_size];
+
+	Packet packet;
+	packet.type = ACTION_INIT;
+	packet.serialize(packet_data);
+
+	network::sendMessage(testClient->mainSocket, packet_data, packet_size);
     
     Size visibleSize = Director::getInstance()->getVisibleSize();
     Vec2 origin = Director::getInstance()->getVisibleOrigin();
@@ -57,8 +69,6 @@ bool MainScene::init()
 	auto label = LabelTTF::create("Hello World", "Arial", 24);
 	this->addChild(label, 1);
 	
-	log()
-
 	// position the label on the center of the screen
 	label->setPosition(Vec2(origin.x + visibleSize.width / 2,
 		origin.y + visibleSize.height - label->getContentSize().height));
@@ -93,3 +103,4 @@ void MainScene::menuCloseCallback(Ref* pSender)
     exit(0);
 #endif
 }
+
