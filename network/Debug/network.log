@@ -1,0 +1,29 @@
+﻿Build started 12.10.2014 07:49:50.
+     1>Project "E:\Coding\Projects\test1\Classes\network\network.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         E:\Coding\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _USRDLL /D NETWORK_EXPORTS /D _CRT_SECURE_NO_WARNINGS /D _WINDLL /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\network.pch" /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt NetworkHost.cpp
+         NetworkHost.cpp
+     1>e:\coding\projects\test1\classes\network\networkhost.h(37): warning C4251: 'NetworkHost::sessions' : class 'std::map<unsigned int,SOCKET,std::less<_Kty>,std::allocator<std::pair<const _Kty,_Ty>>>' needs to have dll-interface to be used by clients of class 'NetworkHost'
+                 with
+                 [
+                     _Kty=unsigned int
+         ,            _Ty=SOCKET
+                 ]
+     1>e:\coding\projects\test1\classes\network\networkhost.h(38): warning C4251: 'NetworkHost::client_ip' : class 'std::vector<char *,std::allocator<_Other>>' needs to have dll-interface to be used by clients of class 'NetworkHost'
+                 with
+                 [
+                     _Other=char *
+                 ]
+     1>e:\coding\projects\test1\classes\network\networkhost.cpp(162): warning C4018: '<' : signed/unsigned mismatch
+       Link:
+         E:\Coding\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"E:\Coding\Projects\test1server\Debug\network.dll" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"E:\Coding\Projects\test1server\Debug\network.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\Coding\Projects\test1server\Debug\network.lib" /MACHINE:X86 /DLL Debug\dllmain.obj
+         Debug\network.obj
+         Debug\NetworkClient.obj
+         Debug\NetworkHost.obj
+         Debug\stdafx.obj
+         network.vcxproj -> E:\Coding\Projects\test1server\Debug\network.dll
+     1>Done Building Project "E:\Coding\Projects\test1\Classes\network\network.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:00.30

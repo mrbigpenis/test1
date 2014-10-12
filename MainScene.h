@@ -2,7 +2,15 @@
 #define __MAINSCENE_SCENE_H__
 
 #include "cocos2d.h"
+<<<<<<< HEAD
 #include <iostream>
+=======
+#include "network.h"
+#include "NetworkClient.h"
+#include "NetworkHost.h"
+
+#include <process.h>
+>>>>>>> origin/master
 
 USING_NS_CC;
 
@@ -23,6 +31,9 @@ public:
 
     // implement the "static create()" method manually
 	CREATE_FUNC(MainScene);
+
+	static NetworkClient* testClient;
+
 };
 
 #endif // __HELLOWORLD_SCENE_H__
